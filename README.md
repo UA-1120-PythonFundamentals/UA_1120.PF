@@ -10,7 +10,7 @@ lhalam - Liubomyr Halamaha
 5) Juls05 - 
 6) OstapHapyak - 
 7) DianaVat - 
-8) Glago85 - 
+8) Glago85 - Vitalij Glagola
 9) NazarKashliak - 
 10) anna01-mouse - 
 11) arsenturkin - 
@@ -21,5 +21,3 @@ lhalam - Liubomyr Halamaha
 16) s
 17) s
 18) s
-
-
