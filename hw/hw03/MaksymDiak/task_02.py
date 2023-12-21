@@ -5,7 +5,6 @@ number = 7649
 res = 1
 for i in str(number):
     res *= int(i)
-
 print(f'task_1: {res}')
 
 # -- 2 --
