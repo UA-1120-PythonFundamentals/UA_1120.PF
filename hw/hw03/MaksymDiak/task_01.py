@@ -19,19 +19,9 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!"""
 
-better_counter = never_counter = is_counter = 0
-
-for el in philisophy.split():
-    if el.startswith('better'):
-        better_counter += 1
-    elif el.startswith('never'):
-        never_counter += 1
-    elif el.startswith('is'):
-        is_counter += 1
-
-print(f'better = {better_counter}', end='; ')
-print(f'never = {never_counter}', end='; ')
-print(f'is = {is_counter}', end='\n\n')
+print(f'better = {philisophy.count('better')}')
+print(f'never = {philisophy.count('never')}')
+print(f'is = {philisophy.count('is')}', end='\n\n')
 
 print(philisophy.upper(), end='\n\n')
 
