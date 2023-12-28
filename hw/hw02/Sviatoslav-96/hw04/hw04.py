@@ -10,6 +10,3 @@ try:
     celsius_to_fahrenheit(celsius_input)
 except ValueError:
     print("Error: Please enter a valid number for the temperature.")"""
-
-
-#https://softserve.academy/mod/quiz/review.php?attempt=481593&cmid=15257 - 04.2 PRACTICAL TASKS/ [CODERUNNER]
