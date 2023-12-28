@@ -12,19 +12,4 @@ except ValueError:
     print("Error: Please enter a valid number for the temperature.")"""
 
 
-
-
-def X_O(string):
-    x_count = string.lower().count('x')
-    o_count = string.lower().count('o')
-    return x_count == o_count
-result1 = X_O("xoxo")
-print(result1)
-
-result2 = X_O("xXoO")
-print(result2)
-
-result3 = X_O("abc")
-print(result3)
-
-result4 = X_O("xxxooo")
+#https://softserve.academy/mod/quiz/review.php?attempt=481593&cmid=15257 - 04.2 PRACTICAL TASKS/ [CODERUNNER]
