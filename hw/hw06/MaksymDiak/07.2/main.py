@@ -37,10 +37,7 @@ def solution(number):
 
 # -- Task 8 --
 def zero_fuel(distance_to_pump, mpg, fuel_left):
-    if fuel_left * mpg >= distance_to_pump:
-        return True
-    else:
-        return False
+    return fuel_left * mpg >= distance_to_pump
     
 # -- Task 9 --
 def are_you_playing_banjo(name):
