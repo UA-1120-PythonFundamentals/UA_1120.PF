@@ -1,10 +1,7 @@
 
-# -- Task 1 --
+# -- Task 1 -- 
 def greet(name):
-    if name == "Johnny":
-        return "Hello, my love!"
-    else:
-        return f"Hello, {name}!"
+    return 'Hello, my love!' if name == 'Johnny' else f'Hello, {name}!'
 
 # -- Task 2 --
 def distance(x1, y1, x2, y2):
@@ -12,8 +9,7 @@ def distance(x1, y1, x2, y2):
 
 # -- Task 3 --
 def filter_words(st):
-    res = ' '.join(st.lower().split())
-    return res[0].upper() + res[1:]
+    return ' '.join(st.lower().split()).capitalize()
 
 # -- Task 4 --
 def number_to_string(num):
@@ -29,11 +25,7 @@ def reverse_list(l):
 
 # -- Task 7 --
 def solution(number):
-    counter = 0
-    for i in range(number):
-        if i % 3 == 0 or i % 5 == 0:
-            counter += i
-    return counter
+    return sum(i for i in range(number) if i % 3 == 0 or i % 5 == 0)
 
 # -- Task 8 --
 def zero_fuel(distance_to_pump, mpg, fuel_left):
@@ -41,17 +33,11 @@ def zero_fuel(distance_to_pump, mpg, fuel_left):
     
 # -- Task 9 --
 def are_you_playing_banjo(name):
-    if name[0] == 'R' or name[0] == 'r':
-        return f'{name} plays banjo'
-    else:
-        return f'{name} does not play banjo'        
+    return f'{name} plays banjo' if name[0] == 'R' or name[0] == 'r' else f'{name} does not play banjo'  
 
 # -- Task 10 --
 def bool_to_word(boolean):
-    if boolean:
-        return 'Yes'
-    else:
-        return 'No'
+    return 'Yes' if boolean else 'No'
 
 # -- Task 11 --
 def count_sheeps(sheep):
