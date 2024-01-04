@@ -6,7 +6,7 @@ lhalam - Liubomyr Halamaha
 1) MaksymDiak - 
 2) AndriiBanduliak - 
 3) KuzmaNikita - 
-4) Sviatoslav-96 - 
+4) Sviatoslav-96 -Sviatsolav Kavyn  
 5) Juls05 - 
 6) OstapHapyak - 
 7) DianaVat - 
