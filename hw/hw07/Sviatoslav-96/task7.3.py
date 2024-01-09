@@ -12,4 +12,4 @@ def calculate_character_counts(input_string):
 
 input_str = "hello"
 result = calculate_character_counts(input_str)
-print(result)
+print(result) 
