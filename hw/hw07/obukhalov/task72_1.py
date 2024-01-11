@@ -1,0 +1,8 @@
+#/usr/bin/env python
+
+#Jenny's secret message
+
+def greet(name):
+    if name == "Johnny":
+        return "Hello, my love!"
+    return "Hello, {name}!".format(name=name)
