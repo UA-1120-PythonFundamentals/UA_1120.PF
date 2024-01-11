@@ -26,4 +26,3 @@ string = "Python is a better programming language. It is never too late to learn
 new_string = replace_all(string, "i", "&")
 
 print(new_string)
-
