@@ -1,9 +1,9 @@
 import random
 
 
-def gess(attempts=10):
+def guess(attempts=10):
     n = random.randint(1, 100)
-    print(f"\nYou have {attempts} attempts to gess the number!", end="\n\n")
+    print(f"\nYou have {attempts} attempts to guess the number!", end="\n\n")
     for i in range(attempts):
         print(f"\tAttempt {i+1}:")
         x = int(input("Input number: "))
@@ -16,4 +16,4 @@ def gess(attempts=10):
     return "You didn't guess the number!"
 
 
-print(gess())
+print(guess())
