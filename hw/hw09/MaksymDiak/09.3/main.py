@@ -9,7 +9,7 @@ load_dotenv()
 
 
 API_KEY = os.getenv("API_KEY")
-print(API_KEY)
+
 
 owm = OWM(API_KEY)
 mgr = owm.weather_manager()
