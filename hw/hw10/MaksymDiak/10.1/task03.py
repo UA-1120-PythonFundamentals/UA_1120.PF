@@ -7,8 +7,8 @@ class Employee:
         Employee.total += 1
 
     @classmethod
-    def print_total(c):
-        return f"Total number of employees = {c.total}."
+    def print_total(cls):
+        return f"Total number of employees = {cls.total}."
 
     def display_info(self):
         return f"Name: {self.name}\nSalary: {self.salary}"
