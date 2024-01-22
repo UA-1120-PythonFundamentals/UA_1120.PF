@@ -6,7 +6,7 @@ class Human:
         return f"Hello, {self.name}!"
 
     @classmethod
-    def species(c):
+    def species(cls):
         return "Homosapiens"
 
     @staticmethod
