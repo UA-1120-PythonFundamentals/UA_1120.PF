@@ -134,7 +134,7 @@
         </form>
 
         <div class="elements">
-            {% for todo in todo_list %}
+            {% for todo in todo_list[::-1] %}
             <div class="el">
                 <div class="name">
                     {% if todo.complete == False %}
