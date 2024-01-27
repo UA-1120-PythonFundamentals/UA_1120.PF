@@ -75,12 +75,8 @@
             padding-right: 15px;
         }
 
-        .name {
+        .todo-title {
             flex: 1;
-        }
-
-        .btns {
-            margin-left: 20px;
         }
 
         a.edit {
@@ -136,7 +132,7 @@
         <div class="elements">
             {% for todo in todo_list[::-1] %}
             <div class="el">
-                <div class="name">
+                <div class="todo-title">
                     {% if todo.complete == False %}
                     <b style="color: #fff; font-size: 20px; text-decoration: none;">{{ todo.title }}</b>
                     {% else %}
