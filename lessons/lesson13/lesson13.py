@@ -85,43 +85,45 @@ class MyNumbers:
         print("__iter__")
         self.a = 1
         return self
+
     def __next__(self):
         print("__next__")
         if self.a <= self.max:
-            x= self.a
+            x = self.a
             self.a += 1
             return x
         else:
             raise StopIteration
-        
+
+
 # x = MyNumbers(5)
 # for i in x:
 #     print(i)
-# N = 10        
+# N = 10
 # print(f"{N=}")
 # i = [MyNumbers(i) for i in range(N)]
 # g = (MyNumbers(i) for i in range(N))
 # print(i.__sizeof__())
 # print(g.__sizeof__())
-# N = 100        
+# N = 100
 # print(f"{N=}")
 # i = [MyNumbers(i) for i in range(N)]
 # g = (MyNumbers(i) for i in range(N))
 # print(i.__sizeof__())
 # print(g.__sizeof__())
-# N = 1000        
+# N = 1000
 # print(f"{N=}")
 # i = [MyNumbers(i) for i in range(N)]
 # g = (MyNumbers(i) for i in range(N))
 # print(i.__sizeof__())
 # print(g.__sizeof__())
-# N = 10000        
+# N = 10000
 # print(f"{N=}")
 # i = [MyNumbers(i) for i in range(N)]
 # g = (MyNumbers(i) for i in range(N))
 # print(i.__sizeof__())
 # print(g.__sizeof__())
-        
+
 # def my_generator(N):
 #     print("my_generator")
 #     yield 10
@@ -141,10 +143,10 @@ class MyNumbers:
 #     print("generator start")
 #     i = 0
 #     while i < N:
-#         print(f"returned {i=}") 
+#         print(f"returned {i=}")
 #         yield ("i=", i)
 #         print(f"i += {1} ", end=" => ")
-#         i += 1 
+#         i += 1
 #         print(f"next {i=}")
 #     print("generator end")
 
@@ -165,7 +167,6 @@ class MyNumbers:
 # g = my_generator(10)
 # for i in g:
 #     pass
-        
 
 
 # def my_decorator(fun):
@@ -177,8 +178,6 @@ class MyNumbers:
 #         print("*"*10)
 #     print("id(wraper)", id(wraper), wraper.__name__)
 #     return wraper
-
-
 
 
 # @my_decorator
@@ -202,40 +201,50 @@ class MyNumbers:
 # def ff():
 #     pass
 
-def my_decorator(sep, rep=5):        
+
+def my_decorator(sep, rep=5):
     def inner(fun):
         print("my_decorator")
+
         def wraper(*args, **qwargs):
-            print(sep*rep)
+            print(sep * rep)
             result = fun(*args, **qwargs)
-            print(sep*rep)
+            print(sep * rep)
 
             return result
+
         return wraper
+
     return inner
+
 
 @my_decorator("><", 10)
 def f(text, n):
-    print(text*n)
+    print(text * n)
 
 
 @my_decorator("_+_")
 def f2(text, n):
-    print(text*n)
+    print(text * n)
+
 
 f("text", 5)
 f2("text", 5)
 f("text", 5)
 f2("text", 5)
+
 
 @my_decorator("_+_")
 def f3(a, b):
-    return a+b
+    return a + b
+
 
 t = f3(1, 6)
 print(t)
 
 import time
+
+
 def timeit(func):
     def wraper(*args, **qwargs):
         start_time = time.perf_counter()
@@ -245,22 +254,26 @@ def timeit(func):
 
         print(f"function{func.__name__} {args} {qwargs} took:{total_time:.8f} seconds")
         return result
+
     return wraper
+
 
 @timeit
 def factorial1(n):
     result = 1
-    for i in range(n+1):
+    for i in range(n + 1):
         result *= i
+
+
 @timeit
 def factorial2(n):
     if n == 0:
         return 1
     else:
-        return n*factorial2(n-1)
-    
+        return n * factorial2(n - 1)
+
+
 factorial1(100)
 factorial1(500)
 factorial2(100)
 # factorial2(500)
-
