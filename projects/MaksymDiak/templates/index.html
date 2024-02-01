@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #b4deee;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            height: 80vh;
+            width: 30%;
+            background-color: #282828;
+            position: relative;
+            border: 3px solid #fff;
+            border-radius: 20px;
+
+        }
+
+        .search {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search input {
+            font-weight: 900;
+            font-size: 20px;
+            padding-left: 7px;
+            padding-right: 7px;
+            height: 30px;
+            width: 90%;
+            max-width: 250px;
+            border-radius: 5px;
+        }
+
+        .search input::placeholder {
+            color: grey;
+        }
+
+        .elements {
+            height: 80vh;
+            max-height: 80%;
+            overflow-y: auto;
+            margin-right: 20px;
+        }
+
+        .elements::-webkit-scrollbar {
+            width: 3px;
+            margin-inline-end: 5px;
+        }
+
+        .elements::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .el {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 15px;
+        }
+
+        .todo-title {
+            flex: 1;
+        }
+
+        a.edit {
+            color: #fff;
+            padding-right: 16px;
+        }
+
+        a.edit:hover {
+            color: grey;
+        }
+
+        a.del {
+            color: grey;
+        }
+
+        a.del:hover {
+            color: red;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            padding-left: 8px;
+            font-size: 1.5em;
+        }
+
+        .btn:hover {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+        <form action="/add" method="post">
+            <div class="search">
+                <input type="text" name="title" placeholder="Add.." id="inputField"><br>
+                <button class="btn" onclick="checkInput()"><i class="fa fa-plus"></i></button>
+                <script>
+                    function checkInput() {
+                        var inputValue = document.getElementById('inputField').value;
+                        if (inputValue === '') {
+                            alert('Input field is empty. Please enter a value.');
+                        }
+                    }
+                </script>
+            </div>
+        </form>
+
+        <div class="elements">
+            {% for todo in todo_list[::-1] %}
+            <div class="el">
+                <div class="todo-title">
+                    {% if todo.complete == False %}
+                    <b style="color: #fff; font-size: 20px; text-decoration: none;">{{ todo.title }}</b>
+                    {% else %}
+                    <b style="color: grey; font-size: 20px; text-decoration: line-through;">{{ todo.title }}</b>
+                    {% endif %}
+                </div>
+                <a class="edit" href="/update/{{ todo.id }}"><i class="fa fa-wrench"></i></a>
+                <a class="del" href="/delete/{{ todo.id }}"><i class="fa fa-trash-o"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>
