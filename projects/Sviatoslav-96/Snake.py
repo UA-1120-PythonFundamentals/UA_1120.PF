@@ -166,9 +166,9 @@ def start_the_game(selected_difficulty, text_input):
 menu = pygame_menu.Menu("Welcome", 460, 530,
                         theme=pygame_menu.themes.THEME_BLUE)
 
-text_name = menu.add.text_input("Please enter your name: ", default="")
-menu.add.selector('Difficulty :', [('Hard', 0), ('Easy', 1)], onchange=set_difficulty)
-menu.add.button("Play", start_the_game, 0, text_name)
-menu.add.button("Quit", pygame_menu.events.EXIT)
+text_name = menu.add.text_input("Please enter your name: ", default="", font_size=27)
+menu.add.selector('Difficulty :', [('Hard', 0), ('Easy', 1)], onchange=set_difficulty, font_size=27)
+menu.add.button("Play", start_the_game, 0, text_name, font_size=27)
+menu.add.button("Quit", pygame_menu.events.EXIT, font_size=27)
 
 menu.mainloop(screen)
