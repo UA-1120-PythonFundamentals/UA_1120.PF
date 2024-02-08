@@ -62,14 +62,8 @@ def display_crash_message(total):
     pygame.time.delay(5000)
     return False
 
-def set_difficulty(selected_difficulty, value):
-    if selected_difficulty == 0:  # Hard
-        return 0
-    elif selected_difficulty == 1:  # Easy
-        return 1
-
 # Start the game function
-def start_the_game(selected_difficulty, text_input):
+def start_the_game(text_input):
     player_name = text_input.get_value()
     running = True
 
@@ -142,11 +136,7 @@ def start_the_game(selected_difficulty, text_input):
 
         if apple == head:
             total += 1
-            if selected_difficulty == 0:
-                speed = total // 2 + 1
-            elif selected_difficulty == 1:
-                if total % 3 == 0:
-                    speed = total // 3 + 1
+            speed = total // 3 + 1
             snake_block.append(apple)
             apple = get_random_empty_block()
 
@@ -167,8 +157,7 @@ menu = pygame_menu.Menu("Welcome", 460, 530,
                         theme=pygame_menu.themes.THEME_BLUE)
 
 text_name = menu.add.text_input("Please enter your name: ", default="", font_size=27)
-menu.add.selector('Difficulty :', [('Hard', 0), ('Easy', 1)], onchange=set_difficulty, font_size=27)
-menu.add.button("Play", start_the_game, 0, text_name, font_size=27)
+menu.add.button("Play", start_the_game, text_name, font_size=27)
 menu.add.button("Quit", pygame_menu.events.EXIT, font_size=27)
 
 menu.mainloop(screen)
