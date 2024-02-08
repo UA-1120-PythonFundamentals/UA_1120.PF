@@ -1,0 +1,48 @@
+[
+    {
+      "name": "elena",
+      "age": 28,
+      "email": "elena@example.com"
+    },
+    {
+      "name": "Vitaliy",
+      "age": 35,
+      "email": "vitaliy@example.com"
+    },
+    {
+      "name": "Anna",
+      "age": 22,
+      "email": "anna@example.com"
+    },
+    {
+      "name": "John",
+      "age": 30,
+      "email": "john@example.com"
+    },
+    {
+      "name": "Sophia",
+      "age": 25,
+      "email": "sophia@example.com"
+    },
+    {
+      "name": "Michael",
+      "age": 40,
+      "email": "michael@example.com"
+    },
+    {
+      "name": "Olivia",
+      "age": 29,
+      "email": "olivia@example.com"
+    },
+    {
+      "name": "Daniel",
+      "age": 33,
+      "email": "daniel@example.com"
+    },
+    {
+      "name": "emma",
+      "age": 26,
+      "email": "emma@example.com"
+    }
+  ]
+  

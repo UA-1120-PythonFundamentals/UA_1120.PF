@@ -1,0 +1,9 @@
+Elena,28,elena@example.com
+Vitaliy,35,vitaliy@example.com
+Anna,22,anna@example.com
+John,30,john@example.com
+Sophia,25,sophia@example.com
+Michael,40,michael@example.com
+Olivia,29,olivia@example.com
+Daniel,33,daniel@example.com
+Emma,26,emma@example.com
