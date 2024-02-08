@@ -5,7 +5,6 @@ import pygame_menu
 
 pygame.init()
 
-background_image = pygame.image.load(r"C:\Github\UA_1120.PF\projects\Sviatoslav-96\snake.jpg")
 # Set up screen size and caption
 SIZE_BLOCK = 20
 COUNT_BLOCK = 20
@@ -79,7 +78,7 @@ def start_the_game(text_input):
 
     snake_block = [SnakeBlock(9, 8), SnakeBlock(9, 9), SnakeBlock(9, 10)]
     apple = get_random_empty_block()
-    d_row_ = buf_row = 0
+    d_row = buf_row = 0
     d_col = buf_col = 1
     total = 0
     speed = 1
@@ -106,7 +105,7 @@ def start_the_game(text_input):
                     buf_col = 1
 
         screen.fill(FRAME_COLOR)
-        screen.blit(background_image, (0, HEADER_MARGIN))
+        screen.blit(screen, (0, HEADER_MARGIN))
 
         text_total = courier.render(f"Total: {total}", 0, WHITE)
         text_speed = courier.render(f"Speed: {speed}", 0, WHITE)
@@ -126,7 +125,7 @@ def start_the_game(text_input):
 
         head = snake_block[-1]
         if not head.is_inside():
-            running = display_crash_message(total, head)
+            running = display_crash_message(total)
             break
 
         draw_block(RED, apple.x, apple.y)
@@ -157,8 +156,8 @@ def start_the_game(text_input):
 menu = pygame_menu.Menu("Welcome", 460, 530,
                         theme=pygame_menu.themes.THEME_BLUE)
 
-text_name = menu.add.text_input("Please enter your name: ", default="")
-menu.add.button("Play", start_the_game, text_name)
-menu.add.button("Quit", pygame_menu.events.EXIT)
+text_name = menu.add.text_input("Please enter your name: ", default="", font_size=27)
+menu.add.button("Play", start_the_game, text_name, font_size=27)
+menu.add.button("Quit", pygame_menu.events.EXIT, font_size=27)
 
 menu.mainloop(screen)
