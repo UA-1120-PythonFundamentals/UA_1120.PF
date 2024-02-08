@@ -109,6 +109,14 @@
             color: grey;
         }
     </style>
+    <script>
+        function checkInput() {
+            var inputValue = document.getElementById('inputField').value;
+            if (inputValue === '') {
+                alert('Input field is empty. Please enter a value.');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -118,14 +126,6 @@
             <div class="search">
                 <input type="text" name="title" placeholder="Add.." id="inputField"><br>
                 <button class="btn" onclick="checkInput()"><i class="fa fa-plus"></i></button>
-                <script>
-                    function checkInput() {
-                        var inputValue = document.getElementById('inputField').value;
-                        if (inputValue === '') {
-                            alert('Input field is empty. Please enter a value.');
-                        }
-                    }
-                </script>
             </div>
         </form>
 
